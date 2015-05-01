@@ -331,7 +331,7 @@ public class CsvBulkLoadTool extends Configured implements Tool {
     static void configureOptions(CommandLine cmdLine, List<ColumnInfo> importColumns,
             Configuration conf) {
 
-        char delimiterChar = '\t';
+        char delimiterChar = ',';
         if (cmdLine.hasOption(DELIMITER_OPT.getOpt())) {
             String delimString = cmdLine.getOptionValue(DELIMITER_OPT.getOpt());
             if (delimString.length() != 1) {
